@@ -1,0 +1,27 @@
+`pragma protect version = 2
+`pragma protect encrypt_agent = "XILINX"
+`pragma protect encrypt_agent_info = "Xilinx Encryption Tool 2019"
+`pragma protect begin_commonblock
+`pragma protect control error_handling = "delegated"
+`pragma protect control runtime_visibility = "delegated"
+`pragma protect control child_visibility = "delegated"
+`pragma protect control decryption=(activity==simulation) ? "false" : "true"
+`pragma protect end_commonblock
+`pragma protect begin_toolblock
+`pragma protect rights_digest_method="sha256"
+`pragma protect key_keyowner = "Xilinx", key_keyname= "xilinxt_2019_02", key_method = "rsa", key_public_key
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAomd6zWDwBd1KlGuxqETx
+OJgcOsq+X0CKG9FLIvBVNZjAyELSE09G5PP+XtPLLuutaUxbt6S6rPhPrX3UGymz
+DVKVrfbK4LtMV8ie2nC6bPOMn8UnWe3N6KKkkR5BB9Ri2+uu1xzWPf570i8/5zaN
+Am4Bd+sYQ1v8z/rLd2dTyDo/BS+uDNvmXWdKT4h/tj5K2wNP5kt2oPzgevh6RHPI
+5CWAREf1AOJodEkKG3D0XGjhjUGOl2P+QH5MJE3uKTa7gwCJuXMozPY2Oz4sSQ8D
+PPi6+A6pa2eMOEIJBXaghpZgAU9FhLUIav4Ob8Bwk/ZzAT442n6ttOJVxq+mfY7E
+pQIDAQAB
+`pragma protect control xilinx_configuration_visible = "false"
+`pragma protect control xilinx_enable_modification = "false"
+`pragma protect control xilinx_enable_probing = "false"
+`pragma protect control xilinx_enable_netlist_export = "false"
+`pragma protect control xilinx_enable_bitstream = "false"
+`pragma protect control xilinx_schematic_visibility="false"
+`pragma protect control decryption=(xilinx_activity==simulation) ? "false" : "true"
+`pragma protect end_toolblock = ""

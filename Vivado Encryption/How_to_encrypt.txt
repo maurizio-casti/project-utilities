@@ -1,0 +1,10 @@
+
+-- HOW TO ENCRYPT --
+
+1. Verify that encrypt.bat, keyfile_ver.txt and keyfile_vhd.txt are in the same folder
+   (if not, or you don't have keyfile_ver.txt and/or keyfile_vhd.txt the batch will ask 
+   permission to create default ones)
+   `
+2. Launch encrypt.bat <namefile.zip>, and a <namefile_encrypted.zip> file will be created
+
+
