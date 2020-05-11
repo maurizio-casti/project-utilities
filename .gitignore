@@ -1,0 +1,22 @@
+# ignore all logs
+*.git
+
+# ignore stuff folders
+mug
+
+# ignore ZIP files
+*.zip
+
+# Ignore Office temporary documents
+*~$*.*
+
+# Ignore any files with BETA/TEMP/LOCAL tag
+*BETA* 
+*beta* 
+*TEMP*
+*temp*
+*TMP*
+*tmp*
+*LOCAL*
+*local*
+
