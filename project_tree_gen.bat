@@ -86,7 +86,7 @@ echo.                                                  >> %proj_name%\.gitignore
 echo # Ignore Office temporary documents               >> %proj_name%\.gitignore
 echo *~$*.*                                            >> %proj_name%\.gitignore
 echo.                                                  >> %proj_name%\.gitignore
-echo # Ignore any files with BETA/TEMP/LOCAL tag       >> %proj_name%\.gitignore
+echo # Ignore any files with BETA/TEMP/LOCAL/DRAFT tag >> %proj_name%\.gitignore
 echo *BETA*                                            >> %proj_name%\.gitignore
 echo *beta*                                            >> %proj_name%\.gitignore
 echo *TEMP*                                            >> %proj_name%\.gitignore
@@ -95,6 +95,8 @@ echo *TMP*                                             >> %proj_name%\.gitignore
 echo *tmp*                                             >> %proj_name%\.gitignore
 echo *LOCAL*                                           >> %proj_name%\.gitignore
 echo *local*                                           >> %proj_name%\.gitignore
+echo *DRAFT*                                           >> %proj_name%\.gitignore
+echo *draft*                                           >> %proj_name%\.gitignore
 echo.                                                  >> %proj_name%\.gitignore
 echo # Vivado IP source subfolder:                     >> %proj_name%\.gitignore
 echo src/Vivado_ip/**/*                                >> %proj_name%\.gitignore
