@@ -49,6 +49,7 @@ md %proj_name%\src\hdl
 md %proj_name%\src\constrs
 md %proj_name%\src\Vivado_bd
 md %proj_name%\src\Vivado_ip
+md %proj_name%\src\Vivado_if
 md %proj_name%\src\Vivado_repo
 
 rem -- Vivado project folder
