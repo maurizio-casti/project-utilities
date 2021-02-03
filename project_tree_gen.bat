@@ -106,6 +106,7 @@ echo.                                                  >> %proj_name%\.gitignore
 echo # Vivado Block Diagram source subfolder:          >> %proj_name%\.gitignore
 echo src/Vivado_bd/**/*.*                              >> %proj_name%\.gitignore
 echo !src/Vivado_bd/**/*.bd                            >> %proj_name%\.gitignore
+echo !src/Vivado_bd/ui/*.ui                            >> %proj_name%\.gitignore
 echo !src/Vivado_bd/*/synth/*.vhd                      >> %proj_name%\.gitignore
 echo !src/Vivado_bd/*/hdl/*.vhd                        >> %proj_name%\.gitignore
 
