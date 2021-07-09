@@ -29,11 +29,11 @@ md %proj_name%\dev
 rem -- Project related documents
 md %proj_name%\doc
 
-rem -- Flash Reopsitory
-md %proj_name%\flash
-
-rem -- SD Reopsitory
-md %proj_name%\sd
+rem -- Program files folder
+md %proj_name%\prog
+md %proj_name%\prog\bitstream
+md %proj_name%\prog\flash
+md %proj_name%\prog\sd
 
 rem -- Local Folder (ignored by GIT)
 md %proj_name%\local
@@ -100,15 +100,25 @@ echo *DRAFT*                                           >> %proj_name%\.gitignore
 echo *draft*                                           >> %proj_name%\.gitignore
 echo.                                                  >> %proj_name%\.gitignore
 echo # Vivado IP source subfolder:                     >> %proj_name%\.gitignore
-echo src/Vivado_ip/**/*                                >> %proj_name%\.gitignore
+echo src/Vivado_ip/**/*.*                              >> %proj_name%\.gitignore
 echo !src/Vivado_ip/**/*.xci                           >> %proj_name%\.gitignore
 echo.                                                  >> %proj_name%\.gitignore
 echo # Vivado Block Diagram source subfolder:          >> %proj_name%\.gitignore
 echo src/Vivado_bd/**/*.*                              >> %proj_name%\.gitignore
 echo !src/Vivado_bd/**/*.bd                            >> %proj_name%\.gitignore
-echo !src/Vivado_bd/ui/*.ui                            >> %proj_name%\.gitignore
-echo !src/Vivado_bd/*/synth/*.vhd                      >> %proj_name%\.gitignore
-echo !src/Vivado_bd/*/hdl/*.vhd                        >> %proj_name%\.gitignore
+echo !src/Vivado_bd/**/*.ui                            >> %proj_name%\.gitignore
+
+
+
+rem -- clean.bat file
+echo echo off                                          >  %proj_name%\clean.bat
+echo md Vivado_tmp                                     >> %proj_name%\clean.bat
+echo xcopy Vivado\*.xpr Vivado_tmp\*.xpr               >> %proj_name%\clean.bat
+echo rd /s /q Vivado                                   >> %proj_name%\clean.bat
+echo md Vivado                                         >> %proj_name%\clean.bat
+echo xcopy Vivado_tmp\*.xpr Vivado\*.xpr               >> %proj_name%\clean.bat
+echo rd /s /q Vivado_tmp                               >> %proj_name%\clean.bat
+echo echo "Finished: Vivado folder cleaned"            >> %proj_name%\clean.bat
 
 
 
