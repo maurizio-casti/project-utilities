@@ -51,6 +51,7 @@ md %proj_name%\src\Vivado_bd
 md %proj_name%\src\Vivado_ip
 md %proj_name%\src\Vivado_if
 md %proj_name%\src\Vivado_repo
+md %proj_name%\src\Vivado_boards
 
 rem -- Vivado project folder
 md %proj_name%\Vivado
