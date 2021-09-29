@@ -102,12 +102,12 @@ echo *draft*                                           >> %proj_name%\.gitignore
 echo.                                                  >> %proj_name%\.gitignore
 echo # Vivado IP source subfolder:                     >> %proj_name%\.gitignore
 echo src/Vivado_ip/**/*.*                              >> %proj_name%\.gitignore
-echo !src/Vivado_ip/**/*.xci                           >> %proj_name%\.gitignore
+echo !src/Vivado_ip/*/*.xci                            >> %proj_name%\.gitignore
 echo.                                                  >> %proj_name%\.gitignore
 echo # Vivado Block Diagram source subfolder:          >> %proj_name%\.gitignore
 echo src/Vivado_bd/**/*.*                              >> %proj_name%\.gitignore
-echo !src/Vivado_bd/**/*.bd                            >> %proj_name%\.gitignore
-echo !src/Vivado_bd/**/*.ui                            >> %proj_name%\.gitignore
+echo !src/Vivado_bd/*/*.bd                             >> %proj_name%\.gitignore
+echo #!src/Vivado_bd/*/*.ui                             >> %proj_name%\.gitignore
 
 
 
