@@ -56,6 +56,8 @@ md %proj_name%\src\Vivado_boards
 rem -- Vivado project folder
 md %proj_name%\Vivado
 
+rem -- Vitis project folder
+md %proj_name%\Vitis
 
 
 rem -- GIT .ignore file
@@ -106,22 +108,13 @@ echo !**/Vivado_ip/*/*.xci                             >> %proj_name%\.gitignore
 echo !**/Vivado_ip/*/*.coe                             >> %proj_name%\.gitignore
 echo.                                                  >> %proj_name%\.gitignore
 echo # Vivado Block Diagram source subfolder:          >> %proj_name%\.gitignore
-echo src/Vivado_bd/*/*                                 >> %proj_name%\.gitignore
-echo !src/Vivado_bd/*/*.bd                             >> %proj_name%\.gitignore
-echo #!src/Vivado_bd/*/*.ui                            >> %proj_name%\.gitignore
-
-
-
-rem -- clean.bat file
-echo echo off                                          >  %proj_name%\clean_vivado.bat
-echo md Vivado_tmp                                     >> %proj_name%\clean_vivado.bat
-echo xcopy Vivado\*.xpr Vivado_tmp\*.xpr               >> %proj_name%\clean_vivado.bat
-echo rd /s /q Vivado                                   >> %proj_name%\clean_vivado.bat
-echo md Vivado                                         >> %proj_name%\clean_vivado.bat
-echo xcopy Vivado_tmp\*.xpr Vivado\*.xpr               >> %proj_name%\clean_vivado.bat
-echo rd /s /q Vivado_tmp                               >> %proj_name%\clean_vivado.bat
-echo echo "Finished: Vivado folder cleaned"            >> %proj_name%\clean_vivado.bat
-
+echo **/Vivado_bd/*/*                                  >> %proj_name%\.gitignore
+echo !**/Vivado_bd/*/*.bd                              >> %proj_name%\.gitignore
+echo #!**/Vivado_bd/*/*.ui                             >> %proj_name%\.gitignore
+echo #!**/Vivado_bd/*/synth/*.vhd                      >> %proj_name%\.gitignore
+echo.                                                  >> %proj_name%\.gitignore
+echo # FOR THE MOMENT: ignore Vitis folder             >> %proj_name%\.gitignore
+echo Vitis                                             >> %proj_name%\.gitignore
 
 
 rem -- MarkDown README.md file
